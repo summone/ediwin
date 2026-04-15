@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Projects | Edinburgh Windows and Doors</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-logo">
+      <img src="Website updates - easy websites/Company Logo - image 1.jpg" alt="Edinburgh Windows and Doors Logo">
+    </div>
+    <div class="nav-center">
+      <div class="nav-dropdown">
+        <a href="index.html#products">Products</a>
+        <div class="dropdown-menu">
+          <a href="sash-windows.html">Sash & Case Windows</a>
+          <a href="accoya-doors.html">Accoya Timber Doors</a>
+          <a href="secondary-glazing.html">Secondary Glazing</a>
+          <a href="contact.html">Composite Doors</a>
+        </div>
+      </div>
+      <a href="commercial.html">Commercial</a>
+      <a href="trade.html">Trade</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="nav-ctas">
+      <a href="trade.html" class="btn btn-outline">Trade Account</a>
+      <a href="contact.html" class="btn btn-primary">Book a Survey</a>
+    </div>
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+
+  <!-- Page Hero -->
+  <div class="hero-internal">
+    <div class="hero-content">
+      <h1>Our Projects</h1>
+      <p class="hero-sub">From presidential commissions to family homes. Every project delivered to the same standard.</p>
+    </div>
+  </div>
+
+  <!-- Filter Buttons -->
+  <section style="padding: 3rem 2rem;">
+    <div class="container">
+      <div class="filter-buttons">
+        <button class="filter-btn active" onclick="filterProjects('all')">All</button>
+        <button class="filter-btn" onclick="filterProjects('residential')">Residential</button>
+        <button class="filter-btn" onclick="filterProjects('commercial')">Commercial</button>
+        <button class="filter-btn" onclick="filterProjects('heritage')">Heritage</button>
+        <button class="filter-btn" onclick="filterProjects('hotel')">Hotel</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Grid -->
+  <section style="padding-top: 0;">
+    <div class="container">
+      <div class="projects-grid">
+        <!-- 1. Fraser Suites -->
+        <a href="commercial.html" class="project-card" data-category="commercial">
+          <img src="Website updates - easy websites/Fraser suites edinburgh sash window refurbishment.png" alt="Fraser Suites Edinburgh">
+          <div class="project-card-overlay">
+            <span class="project-category">Commercial</span>
+            <h3>Fraser Suites Edinburgh</h3>
+            <p>156 sash and case windows restored. Fineo glass fitted throughout.</p>
+          </div>
+        </a>
+
+        <!-- 2. Craighouse -->
+        <a href="commercial.html" class="project-card" data-category="heritage">
+          <img src="Website updates - easy websites/craighouse sash and case project.png" alt="Craighouse">
+          <div class="project-card-overlay">
+            <span class="project-category">Heritage</span>
+            <h3>Craighouse Restoration</h3>
+            <p>136 windows restored and manufactured for Category A listed property.</p>
+          </div>
+        </a>
+
+        <!-- 3. Trump Turnberry -->
+        <a href="commercial.html" class="project-card" data-category="commercial">
+          <img src="Website updates - easy websites/Edinburgh windows and doors trump turnberry.jpg" alt="Trump Turnberry">
+          <div class="project-card-overlay">
+            <span class="project-category">Presidential</span>
+            <h3>Trump Turnberry</h3>
+            <p>Ballistic glazing installation for Presidential visit to Scotland.</p>
+          </div>
+        </a>
+
+        <!-- 4. Stirling University -->
+        <a href="commercial.html" class="project-card" data-category="commercial">
+          <img src="Website updates - easy websites/stirling uni sash and case window repairs.JPG" alt="Stirling University">
+          <div class="project-card-overlay">
+            <span class="project-category">Commercial</span>
+            <h3>Stirling University</h3>
+            <p>Specialist repairs preserving original features in student accommodation.</p>
+          </div>
+        </a>
+
+        <!-- 5. Ochil Tower School -->
+        <a href="commercial.html" class="project-card" data-category="commercial">
+          <img src="Website updates - easy websites/Ochil tower school window replacement.jpg" alt="Ochil Tower School">
+          <div class="project-card-overlay">
+            <span class="project-category">Educational</span>
+            <h3>Ochil Tower School</h3>
+            <p>Double-glazed timber sash windows replacing aluminium units.</p>
+          </div>
+        </a>
+
+        <!-- 6. Grand Island Hotel -->
+        <a href="projects.html" class="project-card" data-category="hotel">
+          <img src="Website updates - easy websites/banjo/Isle of Ulva grand island hotel.jpg" alt="Grand Island Hotel">
+          <div class="project-card-overlay">
+            <span class="project-category">Hotel</span>
+            <h3>Grand Island Hotel, Isle of Ulva</h3>
+            <p>New sash and case windows for remote island hotel refurbishment.</p>
+          </div>
+        </a>
+
+        <!-- 7. Edinburgh Property Full Refurbishment -->
+        <a href="contact.html" class="project-card" data-category="residential">
+          <img src="Website updates - easy websites/Workshop.jpg" alt="Edinburgh property">
+          <div class="project-card-overlay">
+            <span class="project-category">Residential</span>
+            <h3>Edinburgh Property Refurbishment</h3>
+            <p>Full house of new sash and case windows for period property.</p>
+          </div>
+        </a>
+
+        <!-- 8. Aberdeen Install -->
+        <a href="projects.html" class="project-card" data-category="commercial">
+          <img src="Website updates - easy websites/EWD Aberdeen glass install.jpg" alt="Aberdeen install">
+          <div class="project-card-overlay">
+            <span class="project-category">Commercial</span>
+            <h3>Aberdeen Glass Install</h3>
+            <p>Timber window supply and installation in Aberdeen.</p>
+          </div>
+        </a>
+
+        <!-- 9. Helen - Residential Edinburgh -->
+        <a href="contact.html" class="project-card" data-category="residential">
+          <img src="Website updates - easy websites/Helen - sash and case windows.jpg" alt="Helen's project">
+          <div class="project-card-overlay">
+            <span class="project-category">Residential</span>
+            <h3>Helen's Edinburgh Home</h3>
+            <p>Bespoke sash and case windows for homeowner property upgrade.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="navy-bg">
+    <div class="container" style="text-align: center;">
+      <h2>Ready to start your project?</h2>
+      <p style="max-width: 600px; margin: 1.5rem auto; color: rgba(255,255,255,0.9);">Whether it's a single window upgrade or a complex commercial installation, we're ready to deliver.</p>
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <a href="contact.html" class="btn btn-primary btn-lg">Start Your Project</a>
+        <a href="trade.html" class="btn btn-white btn-lg">Trade Enquiry</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-col">
+        <img src="Website updates - easy websites/Company Logo - image 1.jpg" alt="Logo" class="footer-logo">
+        <p class="footer-tagline">Scottish timber sash & case window manufacturer. Est. 2019.</p>
+      </div>
+      <div class="footer-col">
+        <h3>Products</h3>
+        <ul>
+          <li><a href="sash-windows.html">Sash & Case Windows</a></li>
+          <li><a href="accoya-doors.html">Accoya Timber Doors</a></li>
+          <li><a href="secondary-glazing.html">Secondary Glazing</a></li>
+          <li><a href="contact.html">Composite Doors</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Trade & Commercial</h3>
+        <ul>
+          <li><a href="trade.html">Trade Account</a></li>
+          <li><a href="commercial.html">Commercial Projects</a></li>
+          <li><a href="projects.html">Our Projects</a></li>
+          <li><a href="contact.html">Request Quote</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Contact</h3>
+        <div class="footer-contact-info">
+          <p><strong>Phone:</strong><br>01506 168 204</p>
+          <p><strong>Email:</strong><br>sales@edinburghwindowsanddoors.co.uk</p>
+          <p><strong>Location:</strong><br>Edinburgh</p>
+          <p style="margin-top: 1rem; font-size: 0.85rem;">Response within 1 working day<br>Mon–Fri 8am–5pm</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <p>&copy; 2024 Edinburgh Windows and Doors. All rights reserved. Scottish timber manufacturer.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Navigation scroll effect
+    const nav = document.querySelector('nav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+    });
+
+    // Mobile menu toggle
+    const hamburger = document.querySelector('.hamburger');
+    hamburger.addEventListener('click', () => {
+      nav.classList.toggle('mobile-open');
+    });
+
+    document.querySelectorAll('.nav-center a').forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('mobile-open');
+      });
+    });
+
+    // Filter function
+    function filterProjects(category) {
+      const cards = document.querySelectorAll('.project-card');
+      const buttons = document.querySelectorAll('.filter-btn');
+
+      // Update active button
+      buttons.forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+
+      // Filter cards
+      cards.forEach(card => {
+        if (category === 'all' || card.dataset.category === category) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    }
+  </script>
+</body>
+</html>
