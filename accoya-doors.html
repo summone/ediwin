@@ -40,7 +40,7 @@
   </nav>
 
   <!-- Page Hero -->
-  <div class="hero-internal">
+  <div class="hero-internal" style="background-image: url('Website updates - easy websites/Accoya french doors edinburgh.jpg');">
     <div class="hero-content">
       <h1>Accoya Timber Doors</h1>
       <p class="hero-sub">Bespoke external doors built for Scotland's climate. 50-year timber guarantee as standard.</p>
@@ -263,6 +263,23 @@
     document.querySelectorAll('.nav-center a').forEach(link => {
       link.addEventListener('click', () => {
         nav.classList.remove('mobile-open');
+      });
+    });
+
+    // Intersection Observer for scroll animations
+    document.addEventListener("DOMContentLoaded", () => {
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-revealed');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+      
+      document.querySelectorAll("section, .product-card, .buyer-card, .stat-box, .two-col, .project-tile").forEach(el => {
+        el.classList.add("reveal-up");
+        observer.observe(el);
       });
     });
   </script>

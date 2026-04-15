@@ -39,7 +39,7 @@
   </nav>
 
   <!-- Page Hero -->
-  <div class="hero-internal">
+  <div class="hero-internal" style="background-image: url('Website updates - easy websites/Edinburgh property full sash and case refurbishment.JPG');">
     <div class="hero-content">
       <h1>Get in Touch</h1>
       <p class="hero-sub">Book a survey, request a trade quote, or discuss your project. We respond within one working day.</p>
@@ -280,6 +280,23 @@
         alert('Please fill in all required fields.');
       }
     }
+
+    // Intersection Observer for scroll animations
+    document.addEventListener("DOMContentLoaded", () => {
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-revealed');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+      
+      document.querySelectorAll("section, .product-card, .buyer-card, .stat-box, .two-col, .project-tile").forEach(el => {
+        el.classList.add("reveal-up");
+        observer.observe(el);
+      });
+    });
   </script>
 </body>
 </html>

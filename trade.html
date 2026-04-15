@@ -39,7 +39,7 @@
   </nav>
 
   <!-- Page Hero -->
-  <div class="hero-internal">
+  <div class="hero-internal" style="background-image: url('Website updates - easy websites/Workshop.jpg');">
     <div class="hero-content">
       <h1>Timber Sash & Case Windows — Supplier to Trade</h1>
       <p class="hero-sub">Supply your projects with Scottish-manufactured sash and case windows. UK-wide delivery. 6–8 week lead times on supply-only orders.</p>
@@ -276,6 +276,23 @@
         alert('Please fill in all required fields.');
       }
     }
+
+    // Intersection Observer for scroll animations
+    document.addEventListener("DOMContentLoaded", () => {
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-revealed');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+      
+      document.querySelectorAll("section, .product-card, .buyer-card, .stat-box, .two-col, .project-tile").forEach(el => {
+        el.classList.add("reveal-up");
+        observer.observe(el);
+      });
+    });
   </script>
 </body>
 </html>

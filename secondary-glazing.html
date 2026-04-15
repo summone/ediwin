@@ -39,7 +39,7 @@
   </nav>
 
   <!-- Page Hero -->
-  <div class="hero-internal">
+  <div class="hero-internal" style="background-image: url('Website updates - easy websites/stirling uni sash and case window repairs.JPG');">
     <div class="hero-content">
       <h1>Secondary Glazing for Heritage Windows</h1>
       <p class="hero-sub">Discreet, removable, energy-efficient. Designed for sash windows in listed buildings and conservation areas. No planning permission required.</p>
@@ -183,6 +183,23 @@
     document.querySelectorAll('.nav-center a').forEach(link => {
       link.addEventListener('click', () => {
         nav.classList.remove('mobile-open');
+      });
+    });
+
+    // Intersection Observer for scroll animations
+    document.addEventListener("DOMContentLoaded", () => {
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-revealed');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+      
+      document.querySelectorAll("section, .product-card, .buyer-card, .stat-box, .two-col, .project-tile").forEach(el => {
+        el.classList.add("reveal-up");
+        observer.observe(el);
       });
     });
   </script>
